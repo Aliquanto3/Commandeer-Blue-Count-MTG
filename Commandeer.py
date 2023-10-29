@@ -43,7 +43,7 @@ for Commandeer_deck in range(1,5):
         deck = {
             'Commandeer': Commandeer_deck,
             'Pitcher': Pitcher_deck,
-            'Other': 60-4-Pitcher_deck
+            'Other': 60-Commandeer_deck-Pitcher_deck
         }
         #Combo_Success_prob will sum up the probabilities for all combinations with >=1 Commandeer and either >=2 Commandeer or >=1 pitcher
         Combo_Success_prob = 0
