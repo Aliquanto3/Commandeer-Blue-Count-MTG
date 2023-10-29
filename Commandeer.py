@@ -33,9 +33,9 @@ def multivariate_hypgeom(deck, needed):
 handsize = 9
 
 print("Probability of holding a Pitcher or another Commandeer, conditional on holding Commandeer")
-print("=====")
 
 for Commandeer_deck in range(1,5):
+    print("=====")
     #Consider decks with 3 Commandeers
     for Pitcher_deck in range(35):
         #Consider decks with 0-22 pitchers (cards of the same color that you can 'pitch' to cast a Commandeer)
