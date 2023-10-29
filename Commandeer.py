@@ -61,7 +61,7 @@ for Commandeer_deck in range(1,5):
                     needed['Pitcher'] = Pitcher
                     needed['Other'] = handsize - Commandeer - Pitcher
                     probability = multivariate_hypgeom(deck, needed)
-                    if Pitcher >= 2 or Commandeer >= 3:
+                    if Pitcher >= 2 or Commandeer >= 3 or (Pitcher >=1 and Commandeer >=2):
                         #We have either a Pitcher or another Commandeer to pay for the alternative cost
                         Combo_Success_prob += probability
                     #In any case, this was a combination of cards with at least one Commandeer
