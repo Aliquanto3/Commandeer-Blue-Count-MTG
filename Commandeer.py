@@ -36,9 +36,9 @@ print("Probability of holding a Pitcher or another Commandeer, conditional on ho
 
 for Commandeer_deck in range(1,5):
     print("=====")
-    #Consider decks with 3 Commandeers
+    #Consider decks with 1 to 4 Commandeers
     for Pitcher_deck in range(35):
-        #Consider decks with 0-22 pitchers (cards of the same color that you can 'pitch' to cast a Commandeer)
+        #Consider decks with 0-34 pitchers (cards of the same color that you can 'pitch' to cast a Commandeer)
         #Total number of cards in the deck is 60
         deck = {
             'Commandeer': Commandeer_deck,
@@ -55,7 +55,7 @@ for Commandeer_deck in range(1,5):
             for Pitcher in range(Pitcher_deck +1):
                 #So if, e.g., we have Pitcher_deck = 4 Pitchers in our deck, then this range is the set [0, 1, 2, 3, 4]
                 if Commandeer + Pitcher <= handsize:
-                    #We can't consider combinations with, say, 9 Pitchers as those would exceed the number of cards drawn
+                    #We can't consider combinations with, say, 10 Pitchers as those would exceed the number of cards drawn
                     needed = {}
                     needed['Commandeer'] = Commandeer
                     needed['Pitcher'] = Pitcher
